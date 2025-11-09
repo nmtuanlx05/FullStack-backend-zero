@@ -1,0 +1,27 @@
+{
+  "name": "full-backend-zero",
+  "version": "1.0.0",
+  "description": "FULLSTACK BACKEND 0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmtuanlx05/FullStack-backend-zero.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmtuanlx05/FullStack-backend-zero/issues"
+  },
+  "homepage": "https://github.com/nmtuanlx05/FullStack-backend-zero#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
