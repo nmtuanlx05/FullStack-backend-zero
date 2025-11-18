@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,11 @@
   },
   "homepage": "https://github.com/nmtuanlx05/FullStack-backend-zero#readme",
   "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
