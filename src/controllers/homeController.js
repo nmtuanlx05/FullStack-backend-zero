@@ -1,8 +1,9 @@
+const connection = require("../config/database");
+
 const handleGetHomePage = (req, res) => {
   // process data
   //call model
-
-  res.send("Hello World! & Nodemonnn");
+  return res.render("home.ejs");
 };
 
 const getABC = (req, res) => {
