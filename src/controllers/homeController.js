@@ -14,11 +14,31 @@ const getHoiDanIT = (req, res) => {
   res.render("sample.ejs");
 };
 
-const postCreateUser = (req, res) => {
-  console.log(">>> req.body: ", req.body);
-  res.send("create a new user");
-};
+const postCreateUser = async (req, res) => {
+  let { email, myname, city } = req.body;
 
+  console.log(">>> Check email: ", email);
+  console.log(">>> Check name: ", myname);
+  console.log(">>> Check city: ", city);
+
+  // Viết câu lệnh SQL (Dùng dấu ? đại diện cho tham số)
+  // Cấu trúc: INSERT INTO tên_bảng (cột1, cột2, cột3) VALUES (?, ?, ?)
+  let sql = "INSERT INTO Users (email, name, city) VALUES (?, ?, ?)";
+
+  // 3. Gom dữ liệu vào một mảng (Thứ tự phải khớp với dấu ?)
+  let params = [email, myname, city];
+
+  try {
+    //  Thực thi câu lệnh (Có await)
+    // connection.query(câu_lệnh, [dữ_liệu_thay_thế])
+    await connection.query(sql, params);
+
+    res.send("Đã tạo người dùng mới thành công!");
+  } catch (error) {
+    console.log(error);
+    res.send("Lỗi khi thêm người dùng!");
+  }
+};
 module.exports = {
   handleGetHomePage,
   getABC,
